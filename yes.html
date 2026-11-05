@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yay! I Can't Wait! 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="yes-body">
+
+  <!-- Background Audio: Plays automatically on page load -->
+  <audio id="bgMusic" autoplay loop preload="auto">
+    <source src="SOFT.mp3" type="audio/mpeg">
+    <source src="SOFT.Mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Animated Glowing Page Border Wrapping Entire Page -->
+  <div class="romantic-page-frame">
+
+    <!-- Ambient Falling CSS Hearts -->
+    <div class="falling-hearts-container" aria-hidden="true">
+      <div class="falling-heart css-heart"></div>
+      <div class="falling-heart css-heart"></div>
+      <div class="falling-heart css-heart"></div>
+      <div class="falling-heart css-heart"></div>
+      <div class="falling-heart css-heart"></div>
+      <div class="falling-heart css-heart"></div>
+    </div>
+
+    <!-- Main Container Inside the Animated Border -->
+    <main class="success-container">
+
+      <!-- Celebration Header -->
+      <header class="celebration-header">
+        <h1 class="celebration-title">Yay! I Can't Wait! 🥰</h1>
+        <p class="celebration-subtitle">You just made my whole world brighter! 🌹✨</p>
+      </header>
+
+      <!-- 4 Placeholder Videos Grid (for videos of her) -->
+      <section class="videos-grid">
+        
+        <!-- Video 1 -->
+        <article class="video-card">
+          <div class="heart-badge css-heart"></div>
+          <div class="video-wrapper">
+            <video class="placeholder-video" controls loop playsinline preload="metadata">
+              <source src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="video-caption">
+            <span class="css-heart"></span>
+            <span>Your Radiant Smile</span>
+          </p>
+        </article>
+
+        <!-- Video 2 -->
+        <article class="video-card">
+          <div class="heart-badge css-heart"></div>
+          <div class="video-wrapper">
+            <video class="placeholder-video" controls loop playsinline preload="metadata">
+              <source src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="video-caption">
+            <span class="css-heart"></span>
+            <span>Favorite Memory</span>
+          </p>
+        </article>
+
+        <!-- Video 3 -->
+        <article class="video-card">
+          <div class="heart-badge css-heart"></div>
+          <div class="video-wrapper">
+            <video class="placeholder-video" controls loop playsinline preload="metadata">
+              <source src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="video-caption">
+            <span class="css-heart"></span>
+            <span>Sweetest Laugh</span>
+          </p>
+        </article>
+
+        <!-- Video 4 -->
+        <article class="video-card">
+          <div class="heart-badge css-heart"></div>
+          <div class="video-wrapper">
+            <video class="placeholder-video" controls loop playsinline preload="metadata">
+              <source src="" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="video-caption">
+            <span class="css-heart"></span>
+            <span>Forever Moments</span>
+          </p>
+        </article>
+
+      </section>
+
+      <!-- Back Link -->
+      <footer>
+        <a href="index.html" class="return-home">
+          <span>Ask me again? 😉</span>
+        </a>
+      </footer>
+
+    </main>
+  </div>
+
+  <!-- Audio Autoplay Support Script -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('bgMusic');
+      if (!audio) return;
+
+      const playPromise = audio.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // If browser policy requires gesture, start on first click or touch
+          const startAudio = () => {
+            audio.play();
+            document.removeEventListener('click', startAudio);
+            document.removeEventListener('touchstart', startAudio);
+          };
+          document.addEventListener('click', startAudio);
+          document.addEventListener('touchstart', startAudio);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
